@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+[data-md-color-scheme="slate"] h1, 
+[data-md-color-scheme="slate"] h2, 
+[data-md-color-scheme="slate"] h3, 
+[data-md-color-scheme="slate"] h4 
+[data-md-color-scheme="slate"] h5 {
+  font-family: "Bungee";
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+:root {
+  font-family: 'Nunito';
+}

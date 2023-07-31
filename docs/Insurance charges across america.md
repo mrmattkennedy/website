@@ -31,7 +31,7 @@ Next, we have number of `children`. Here we can more of a disparity between grou
 
 Now we take a look at `smoker` vs non smoker groups. The difference is pretty shocking - smokers' insurance are billed roughly **4x** as much as their non-smoking counterparts. Smoking has been proven to be extremely unhealthy, and the lifestyle can impact medical costs heavily, as seen here.
 
-#### Regons
+#### Regions
 
 ![Region vs average charges](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/region_avg.png)
 
@@ -53,22 +53,77 @@ Lastly, we have `bmi`, or body mass index. This is measured as a person's weight
 ##### Thoughts
 Shown above, we can see some trends that we would expect to see - that smoking, age, and BMI are all heavily impactful on medical costs. However, the dataset provided here is limited in scope. While it would be easy to assume that age directly increases medical costs on average, this data is looking at the amount charged to insurance. So for a younger population who may not have insurance, or may not be comfortable going to a doctor and will wait 10 years before the problem is unignorable, we may not have a fully accurate representation of these features vs medical costs.
 
+To get a better understanding of what group of features may be most responsible for higher bills, we can split this data in deciles based on the amount charged to insurance, then take the top 10% decile and get a row count for each possible group of features. Because the number of features is so small, this is possible for us, but it wouldn't normally be if there were more columns or more possible values for the columns we have. 
 
 #### Highest average bills
 
-To get a better understanding of what group of features may be most responsible for higher bills, we can split this data in deciles based on the amount charged to insurance, then take the top 10% decile and get a row count for each possible group of features. Because the number of features is so small, this is possible for us, but it wouldn't normally be if there were more columns or more possible values for the columns we have. After getting the top 10% most expensive charges, which is `134 rows` of data with an average charge amount of `$42,378` and getting the number of possible combinations of features out of our 6 columns, the total comes to `88,320` different unique groups of features. The table below lists what features are most commonly seen, and in how many rows that value is seen.
 
-| Method      | Description                          |
-| ----------- | ------------------------------------ |
-| Age        | :material-check:     Fetch resource  |
-| Sex        | :material-check-all: Update resource |
-| BMI        | :material-close:     Delete resource |
-| # Children | :material-close:     Delete resource |
-| Smoker     | :material-close:     Delete resource |
-| Region     | :material-close:     Delete resource |
+
+After getting the top 10% most expensive charges, which is `134 rows` of data with an average charge amount of `$42,378` and getting the number of possible combinations of features out of our 6 columns, the total comes to `88,320` different unique groups of features. The table below lists what features are most commonly seen, and in how many rows that value is seen.
+
+| Age | Sex | BMI | # Children | Smoker | Region |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+|Age 37: 7<br/>Age 43: 66<br/>Age 22: 5<br/>Age 60: 5<br/>Age 44: 5 | Male: 84<br/>Female: 50 | 36 BMI: 18<br/>34 BMI: 15<br/>31 BMI: 13<br/>37 BMI: 12<br/>35 BMI: 11 | 0 children: 48<br/>2 children: 34<br/>1 child: 31<br/>3 children: 19<br/>4 children: 2<br/> | Smoker: 131<br/>Non-smoker: 3 | Southeast: 55<br/>Southwest: 32<br/>Northeast: 27<br/>Northwest: 20 |
+
+Some interesting trends to be seen in the table above - for example, almost every individual in the top 10% are smokers. Additionally, without making the page significantly longer, most of the expensive bills have a BMI that labels them as "obese". On the other side of the spectrum, the age was fairly diverse, except for 43 year olds - this is likely just due to natural aging, as well as the sample mostly comprising of this age range.
+
+#### Lowest average bills
+
+After getting the bottom 10% least expensive charges, which is `134 rows` of data with an average charge amount of `$1,796` and getting the number of possible combinations of features out of our 6 columns, the total comes to `6,264` different unique groups of features. The table below lists what features are most commonly seen, and in how many rows that value is seen.
+
+| Age | Sex | BMI | # Children | Smoker | Region |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+|Age 18: 46<br/>Age 19: 38<br/>Age 21: 14<br/>Age 20: 12<br/>Age 22: 12 | Male: 82<br/>Female: 52 | 26 BMI: 9<br/>30 BMI: 9<br/>34 BMI: 8<br/>29 BMI: 8<br/>28 BMI: 7 | 0 children: 118<br/>1 child: 15<br/>2 children: 1| Smoker: 0<br/>Non-smoker: 89 | Southeast: 47<br/>Southwest: 38<br/>Northeast: 25<br/>Northwest: 25 |
+
+A lot of what we saw in highest cost billed matches for this table as well - this is likely due to how large a sample size is out of the entire population. For example, we can see still more males fall into the bottom 10% of bills than females, and still more individuals from the southeast. However, we also see that the lower age ranges (18-22) are the most common ages for cheapest bills. Additionally, the BMI ranges are slightly lower, and there are absolutely no smokers.
 
 ### Data modeling
 
+After exploring the data and understanding that some features can impact the medical bill more than others, let's see if we can create some probabilstic modeling - first, we can start with a basic feed forward neural network, and see if any other regression models or probabilstic models can perform better.
+
+#### Neural network
+
+For the neural network, we're going to start by creating an attention model with encoder and decoder layers, and provide multiple transformation layers to... actually, we don't need to do any of that. While AI has been getting incredibly popular and we've made some truly incredible advancements, this is a simple dataset. There's no need to build a crazy network - let's start with a basic model using `tensorflow`.
+
+After importing our libraries and preprocessing our data using `sklearn` as belows:
+```python
+#Preprocess data - #Start by converting string to int
+df['sex'] = pd.Categorical(df['sex']).codes
+df['children'] = pd.Categorical(df['children']).codes
+df['smoker'] = pd.Categorical(df['smoker']).codes
+df['region'] = pd.Categorical(df['region']).codes
+
+#Create transformer
+transformer = make_column_transformer(
+    (MinMaxScaler(), ['age', 'sex', 'bmi', 'children', 'smoker', 'region', 'charges'])
+)
+
+#Transform and split data
+transformer.fit(df)
+data = transformer.transform(df)
+
+#Split data
+y_data = data[:,-1]
+X_data = df.iloc[:,:-1]
+
+test_size = 100
+X_train, X_test = X_data[:-test_size], X_data[-test_size:]
+y_train, y_test = y_data[:-test_size], y_data[-test_size:]
+```
+
+In just a few lines of code, we've preprocessed our data to scale between 0 and 1 using the `MinMaxScaler` of sklearn. Now, we can make our model - we can create a basic 3 layer network, with a batch size of 8 and 50 epochs. We'll use the standard `Adam` optimizer, as well as `relu` activations on each layer except the last - the reason for this is `relu` will prevent negative output from coming through, and some predictions could potentially be negative.
+
+```python
+#Create model
+model = Sequential()
+model.add(Dense(256, input_shape=(X_data.shape[1],), activation="relu"))
+model.add(Dense(128, activation="relu"))
+model.add(Dense(1))
+
+#Compile and fit model
+model.compile(loss='mse', optimizer=tf.keras.optimizers.Adam(), metrics='mse')
+model.fit(X_train, y_train, batch_size=8, epochs=50)
+```
 ### What can I do to reduce my bill?
 
 

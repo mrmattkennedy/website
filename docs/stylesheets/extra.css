@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee');
-[data-md-color-scheme="slate"] h1, 
-[data-md-color-scheme="slate"] h2, 
-[data-md-color-scheme="slate"] h3, 
-[data-md-color-scheme="slate"] h4 
-[data-md-color-scheme="slate"] h5 
-[data-md-color-scheme="slate"] h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Bungee";
 }
 

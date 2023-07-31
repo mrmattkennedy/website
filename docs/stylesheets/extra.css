@@ -3,7 +3,8 @@
 [data-md-color-scheme="slate"] h2, 
 [data-md-color-scheme="slate"] h3, 
 [data-md-color-scheme="slate"] h4 
-[data-md-color-scheme="slate"] h5 {
+[data-md-color-scheme="slate"] h5 
+[data-md-color-scheme="slate"] h6 {
   font-family: "Bungee";
 }
 

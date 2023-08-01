@@ -1,14 +1,14 @@
+# Exploring medical bills across an individual's features
+
 It's another day in America - you wake up, enjoy some coffee to fight through that morning groginess, and crack open the paper. After your normal routine, it's time to start your day, and you head outside to warm your vehicle up to get to work. As you take your first step, the ground beneath you disappears and a sinkhole eats your entire right leg, then immediately closes. It looks like the ground has become sentient and has a craving for legs, but only right legs oddly enough. It happens so fast you can't react, but when your brain catches up with what is happening, you scramble away from the sinkhole. This isn't good - you need to go to the hospital, but the thought of that potential hospital bill makes you faint. After a moment, you regain consciousness and decide that it's ok; you have health insurance, and it can't be that bad. What does a sinkhole-bite replacement surgery cost, anyway? As your leg continues to bleed and you really need to get to the hospital, your curious nature continues to preoccupy you, and you can't help but wonder: do you know the price of *anything* at a hospital? Is there a way to know how much I'm going to pay before hand?
 
-These are all great questions that an unfortunate number of Americans don't have the answer to. And while none of us are going to be eaten by a sentient sinkhole tomorrow (I hope), you never know what the day may bring, and if a hospital visit is included. Even more nebulous is the cost of that visit, both to your insurance provider, and what you end up with. Throughout this read, we're going to explore what factors about an individual relate to their average hospital charges, how well can we can predict these charges based off of those factors, and what you can do to help reduce your hospital bill charges.
+These are all great questions that an unfortunate number of Americans don't have the answer to. And while none of us are going to be eaten by a sentient sinkhole tomorrow (I hope), you never know what the day may bring, and if a hospital visit is included. Even more nebulous is the cost of that visit, both to your insurance provider, and what you end up with. Throughout this read, we're going to explore what factors about an individual relate to their average hospital charges, how well can we can predict these charges based off of those factors, and drawing conclusions.
 
 ### What data will we be using?
 
-For this article, we'll be using a dataset from the book `Machine Learning with R by Brett Lantz` - specifically, this book provides a dataset that has medical billing data. The columns in this dataset contain an individual's `age`, `sex`, `bmi`, `number of children`, `smoker`, `region of the U.S.`, and the `amount their insurance was billed`. This dataset is relatively simple - it's purpose is almost entirely educational. This matches the purpose of this article, to explore the basics of data visualization and predictive modeling.
+For this article, we'll be using a dataset from the book `Machine Learning with R by Brett Lantz` - specifically, this book provides a dataset that has medical billing data. The columns in this dataset contain an individual's `age`, `sex`, `bmi`, number of `children`, `smoker`, `region` of the U.S., and the amount their insurance was billed, or `charges`. This dataset is relatively simple - it's purpose is almost entirely educational. This matches the purpose of this article, to explore the basics of data visualization and predictive modeling.
 
 ### Exploring the data
-
-Look into most expensive bills - what were most common features of 10% most expensive and bottom 10% least expensive?
 
 Looking at the attributes available, we can start by visualizing how each one is directly correlated to the `charges` column. To do this, we can create bar charts for the non-continuous variables, which are `sex`, `children`, `smoker`, and `region`. For the continuous variables, `age` and `bmi`, we can review line charts that display the average cost to insurance and identify what the trend is for these variables.
 
@@ -17,7 +17,7 @@ Looking at the attributes available, we can start by visualizing how each one is
 
 ![Sex vs average charges](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/sex_avg.png)
 
-Looking at the first categorical variable, `sex` groups the average cost of medical charges by male and female. We don't immediately see any extreme difference - males are, on average, charged a little higher, it's a fairly small difference.
+Looking at the first categorical variable, `sex` groups the average cost of medical charges by male and female. We don't immediately see any extreme difference - males are, on average, charged a little higher, although it's a fairly small difference.
 
 #### Number of children
 
@@ -73,19 +73,19 @@ After getting the bottom 10% least expensive charges, which is `134 rows` of dat
 
 | Age | Sex | BMI | # Children | Smoker | Region |
 | ---- | ---- | ---- | ---- | ---- | ---- |
-|Age 18: 46<br/>Age 19: 38<br/>Age 21: 14<br/>Age 20: 12<br/>Age 22: 12 | Male: 82<br/>Female: 52 | 26 BMI: 9<br/>30 BMI: 9<br/>34 BMI: 8<br/>29 BMI: 8<br/>28 BMI: 7 | 0 children: 118<br/>1 child: 15<br/>2 children: 1| Smoker: 0<br/>Non-smoker: 89 | Southeast: 47<br/>Southwest: 38<br/>Northeast: 25<br/>Northwest: 25 |
+|Age 18: 46<br/>Age 19: 38<br/>Age 21: 14<br/>Age 20: 12<br/>Age 22: 12 | Male: 82<br/>Female: 52 | 26 BMI: 9<br/>30 BMI: 9<br/>34 BMI: 8<br/>29 BMI: 8<br/>28 BMI: 7 | 0 children: 118<br/>1 child: 15<br/>2 children: 1| Smoker: 0<br/>Non-smoker: 134 | Southeast: 47<br/>Southwest: 38<br/>Northeast: 25<br/>Northwest: 25 |
 
 A lot of what we saw in highest cost billed matches for this table as well - this is likely due to how large a sample size is out of the entire population. For example, we can see still more males fall into the bottom 10% of bills than females, and still more individuals from the southeast. However, we also see that the lower age ranges (18-22) are the most common ages for cheapest bills. Additionally, the BMI ranges are slightly lower, and there are absolutely no smokers.
 
-### Data modeling
+### Predictive modeling
 
 After exploring the data and understanding that some features can impact the medical bill more than others, let's see if we can create some probabilstic modeling - first, we can start with a basic feed forward neural network, and see if any other regression models or probabilstic models can perform better.
 
 #### Neural network
 
-For the neural network, we're going to start by creating an attention model with encoder and decoder layers, and provide multiple transformation layers to... actually, we don't need to do any of that. While AI has been getting incredibly popular and we've made some truly incredible advancements, this is a simple dataset. There's no need to build a crazy network - let's start with a basic model using `tensorflow`.
+For the neural network, we're going to start by creating an attention model with encoder and decoder layers, and provide multiple transformation layers to... actually, we don't need to do any of that. While AI has been getting incredibly popular and we've made some truly impressive advancements, this is a simple dataset. There's no need to build a crazy network - let's start with a basic model using `tensorflow`.
 
-After importing our libraries and preprocessing our data using `sklearn` as belows:
+We'll start by importing our libraries and preprocessing our data using `sklearn`:
 ```python
 #Preprocess data - #Start by converting string to int
 df['sex'] = pd.Categorical(df['sex']).codes
@@ -111,7 +111,7 @@ X_train, X_test = X_data[:-test_size], X_data[-test_size:]
 y_train, y_test = y_data[:-test_size], y_data[-test_size:]
 ```
 
-In just a few lines of code, we've preprocessed our data to scale between 0 and 1 using the `MinMaxScaler` of sklearn. Now, we can make our model - we can create a basic 3 layer network, with a batch size of 8 and 50 epochs. We'll use the standard `Adam` optimizer, as well as `relu` activations on each layer except the last - the reason for this is `relu` will prevent negative output from coming through, and some predictions could potentially be negative.
+In just a few lines of code, we've preprocessed our data to scale between 0 and 1 using the `MinMaxScaler` of sklearn, and split the data into train samples and 100 test samples. Now, we can make our model - we can create a basic 3 layer network, with a batch size of 8 and 50 epochs. We'll use the standard `Adam` optimizer, as well as `relu` activations on each layer except the last - the reason for this is `relu` will prevent negative output from coming through, and some predictions could potentially be negative.
 
 ```python
 #Create model
@@ -124,6 +124,35 @@ model.add(Dense(1))
 model.compile(loss='mse', optimizer=tf.keras.optimizers.Adam(), metrics='mse')
 model.fit(X_train, y_train, batch_size=8, epochs=50)
 ```
-### What can I do to reduce my bill?
 
+Great! We've run our model, let's see what our mean squared error is to check the accuracy of our model, and how our predictions look.
 
+![nn_mse](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/nn_mse.png)
+
+These are impressive results - we can see that the predictions of the model almost exactly match that of the true labels. The overall mean squared error here is only 0.01405. For many projects, these results would be above passing and could work for many applications - but can we do better?
+
+#### Ensemble methods
+
+With the `sklearn` library available, we can use over 200 different kinds of estimators. This article could be a lot longer if we wanted to step through each one. Instead, we'll use a few basic `ensemble` methods. Ensembles are groups of classifiers that work together to achieve better performance, and can often perform better than large independent classifiers. These are great for regression too - the ensemble methods we'll use `AdaBoost`, `RandomForest`, and `GradientBoost`.
+
+Sklearn also makes it incredibly easy to use any of these models. The below code will create the different ensembles, fit and train them, then create predictions
+```python
+from sklearn.ensemble import AdaBoostRegressor, RandomForestRegressor, GradientBoostingRegressor
+
+ensembles = [AdaBoostRegressor(), RandomForestRegressor(), GradientBoostingRegressor()]
+for e in ensembles:
+    e.fit(X_train, y_train)
+    preds = e.predict(X_test)
+```
+
+Now that we have our ensemble methods fit and predicting, let's see how they did
+
+![adaboost_mse](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/adaboost_mse.png)
+![gradientboost_mse](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/gradientboost_mse.png)
+![randomforest_mse](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/randomforest_mse.png)
+
+Once again, these results are ideal, and they even outperformed the neural network! While the MSE for the neural network was roughly 0.01405, each of these is significantly lower, with the RandomForest dropping under 0.004. With no doubt, if better results were necessary, some hyperparameter optimization and other fine tuning could push this mean squared error value even lower.
+
+### Conclusions
+
+After having a bad start to your day and having your leg eaten by a sinkhole, you were faced with the dilemma - what factors go into medical costs? Am I likely to be charged more? To be honest, we can't answer that very well - no one has ever had their leg eaten by a sinkhole like this before. However, we can make some confident predictions based on your `age`, `sex`, whether you are a `smoke`, and `BMI` as to what your average bill will be. Additionally, we can better understand what information would be beneficial in continuing this exploration of medical prices, such as what group is more likely to have insurance, what group is more likely to actually go to the doctor if there is an issue, etc. With this information in hand, you feel prepared to tackle the day. You are now 10 minutes late for work after reading this. Sorry about that.

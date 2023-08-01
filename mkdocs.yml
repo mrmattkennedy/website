@@ -1,4 +1,4 @@
-site_name: Visualizing Medical Data
+site_name: Matt Kennedy's Portfolio
 theme:
   name: material
   palette: 
@@ -17,7 +17,6 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
-    - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
@@ -77,4 +76,5 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
 ## Page tree

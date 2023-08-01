@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Bungee";
+  font-family: "Merriweather";
 }
 
-
-@import url('https://fonts.googleapis.com/css?family=Nunito');
 :root {
   font-family: 'Nunito';
 }

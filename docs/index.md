@@ -6,7 +6,7 @@ Hi there :wave: I'm Matt! I'm a data enthusiast, who has worked as a data scient
 
 I love to share my findings and create visualizations to show what can be found and created from data. 
 
-I have experience handling data at every step in the data lifecycle for companies as large as fortune 50, and as small as 100 employees, from commercial retail data to medical device data used to save lives.
+My experience includes handling data at every step in the data lifecycle for companies as large as fortune 50, and as small as 100 employees, from commercial retail data to medical device data used to save lives.
 
 ## Favorite projects
 

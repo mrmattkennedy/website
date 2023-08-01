@@ -1,6 +1,9 @@
 # About Matt
 
-![pfp](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/pictures/pfp-with-border.png){align=left}
+<!-- ![pfp](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/pictures/pfp-with-border.png) -->
+<figure markdown>
+  ![pfp](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/pictures/pfp-with-border.png){ width="400" }
+</figure>
 
 Hi there :wave: I'm Matt! I'm a data enthusiast, who has worked as a data scientist :fontawesome-solid-microchip:, data engineer :fontawesome-solid-database:, data analyst :fontawesome-solid-chart-line:, and I've done just about every role regarding data. 
 

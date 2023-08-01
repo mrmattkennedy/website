@@ -34,4 +34,4 @@ The second article, [Analyzing Census Populations](/census), is a more in-depth 
 
 ## Pictures of my dog
 
-![pfp](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/pictures/dog1.JPG) ![pfp](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/pictures/dog2.JPG) ![pfp](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/pictures/dog3.JPG)
+![dog1](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/pictures/dog1.JPG) ![dog2](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/pictures/dog2.JPG) ![dog3](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/pictures/dog3.JPG)

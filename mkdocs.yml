@@ -1,4 +1,7 @@
-site_name: Matt Kennedy's Portfolio
+site_name: Portfolio
+repo_url: https://github.com/mrmattkennedy/TH-Medical-Charges
+repo_name: Portfolio Submission
+
 theme:
   name: material
   palette: 
@@ -14,7 +17,10 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
+
   features:
+    - navigation.footer
     - navigation.instant
     - navigation.tracking
     - navigation.tabs.sticky
@@ -29,12 +35,13 @@ theme:
     - content.code.annotate
 
   icon:
-    logo: material/library
+    logo: octicons/paper-airplane-24
 
   # font:
   #   text: Bungee
     
 plugins:
+  - mkdocs-jupyter
   - search:
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - tags:
@@ -74,7 +81,18 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
+extra:
+  social:
+    - icon: material/email 
+      link: mailto:mdkennedy03@gmail.com
+
 extra_css:
   - stylesheets/extra.css
 
 ## Page tree
+nav:
+- Home: index.md
+- Exploring Medical Bills Across an Individual's Features: insurance_charges.md
+- Analyzing Census Populations : census.ipynb
+
+

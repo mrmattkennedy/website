@@ -92,7 +92,7 @@ extra_css:
 ## Page tree
 nav:
 - Home: index.md
-- Exploring Medical Bills Across an Individual's Features: insurance_charges.md
-- Analyzing Census Populations : census.ipynb
+- Exploring medical bills across an individual's features: insurance_charges.md
+- Analyzing census populations : census.ipynb
 
 

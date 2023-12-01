@@ -5,7 +5,7 @@
   ![pfp](https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/pictures/pfp-with-border.png){ width="400" }
 </figure>
 
-Hi there :wave: I'm Matt! I'm a data enthusiast, who has worked as a data scientist :fontawesome-solid-microchip:, data engineer :fontawesome-solid-database:, data analyst :fontawesome-solid-chart-line:, and I've done just about every role regarding data. 
+Hi there :wave: I'm Matt! I'm a data and software enthusiast, who has worked as a data scientist :fontawesome-solid-microchip:, data engineer :fontawesome-solid-database:, data analyst :fontawesome-solid-chart-line:, software engineer :fontawesome-solid-code:, and I've done just about every role regarding data. 
 
 I love to share my findings and create visualizations to show what can be found and created from data. 
 
@@ -17,7 +17,7 @@ If you want to contact me, click the email :material-email: icon in the footer t
 Some of these are available on my GitHub - others are not due to privacy concerns, sorry
 
 #### Scooter :material-scooter:
-A social media app built for Android, which is great for sharing text and image posts with friends. Includes sentiment analysis and document categorization, and optimized cloud caching
+A social media app built for Android, which is great for sharing text and image posts with friends. Includes sentiment analysis and document categorization, and optimized cloud caching.
 
 #### Lots of Options :fontawesome-solid-dollar-sign:
 After trying to find historical options data and being unable to, I created a program that will download all options expirations available for >8,000 symbols, processes them in real time every minute, and stores the data in a compressed format. This is over 200gb of data a day being downloaded and processed instantly, don't tell my ISP.

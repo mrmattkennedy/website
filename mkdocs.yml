@@ -1,6 +1,6 @@
 site_name: Portfolio
 repo_url: https://github.com/mrmattkennedy/TH-Medical-Charges
-repo_name: Portfolio Submission
+repo_name: MattKennedy-Website
 
 theme:
   name: material
@@ -94,7 +94,7 @@ extra_css:
 nav:
 - Home: index.md
 - Exploring medical bills across an individual's features: insurance_charges.md
-- Working with semantics and parts-of-speech for non-canonical data: mypaper.md
+- Working with semantics and parts-of-speech for non-canonical data: cs447.md
 - Analyzing census populations : census.ipynb
 
 

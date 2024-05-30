@@ -7,7 +7,7 @@
 
 Hi there :wave: I'm Matt! I'm a data and software enthusiast, who has worked as a data scientist :fontawesome-solid-microchip:, data engineer :fontawesome-solid-database:, data analyst :fontawesome-solid-chart-line:, software engineer :fontawesome-solid-code:, and I've done just about every role regarding data, and created a lot of different software.
 
-I love to share my findings and create visualizations to show what can be found and created from data. I also love to research and explore topics such as algorithm optimization, data compression, hyperparameter tuning, teaching machines to do stupid stuff, and much more. You can find some examples of my projects in the [projects page](projects.md).
+I love to share my findings and create visualizations to show what can be found and created from data. I also love to research and explore topics such as algorithm optimization, data compression, hyperparameter tuning, teaching machines to do stupid stuff, and much more. You can find some examples of my projects in the [projects page](projects/projects.md).
 
 My experience includes creating software for a variety of applications, including companies as large as fortune 50, and as small as 100 employees, working with raw commercial retail data used to guide business decisions, to medical device data used to save lives.
 
@@ -19,7 +19,7 @@ Additionally, you can find my linkedin profile at [https://linkedin.com/in/mrmat
 ## Favorite projects
 Some of these are available on my GitHub - others are not due to privacy concerns, sorry.
 
-For a full list of projects, check out the **[Projects](projects.md)** page on the left.
+For a full list of projects, check out the **[Projects](projects/projects.md)** page on the left.
 
 #### Scooter :material-scooter:
 A social media app built for Android, which is great for sharing text and image posts with friends. Includes sentiment analysis and document categorization, and optimized cloud caching.

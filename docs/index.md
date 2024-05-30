@@ -19,7 +19,7 @@ Additionally, you can find my linkedin profile at [https://linkedin.com/in/mrmat
 ## Favorite projects
 Some of these are available on my GitHub - others are not due to privacy concerns, sorry.
 
-For a full list of projects, check out the **[Projects](projects/projects.md)** page on the left.
+For a full list of projects, check out the **[Projects](/docs/projects/projects.md)** page on the left.
 
 #### Scooter :material-scooter:
 A social media app built for Android, which is great for sharing text and image posts with friends. Includes sentiment analysis and document categorization, and optimized cloud caching.

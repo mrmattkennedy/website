@@ -95,7 +95,7 @@ extra_css:
 ## Page tree
 nav:
 - Home: index.md
-- Projects: projects/projects.md
+- Projects: projects/projects_page.md
 - Research:
   - Exploring medical bills across an individual's features: research/insurance_charges.md
   - Working with semantics and parts-of-speech for non-canonical data: research/cs447.md

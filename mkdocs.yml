@@ -37,7 +37,7 @@ theme:
 
   icon:
     logo: octicons/paper-airplane-24
-
+  favicon: assets/paper-airplane-24.svg
   # font:
   #   text: Bungee
     

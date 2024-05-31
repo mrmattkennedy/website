@@ -1,0 +1,1078 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../projects/projects_page/">
+      
+      
+        <link rel="next" href="../cs447/">
+      
+      
+      <link rel="icon" href="../../assets/paper-airplane-24.svg">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Exploring medical bills across an individual's features - Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-data-will-we-be-using" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Portfolio" class="md-header__button md-logo" aria-label="Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.513 1.96a1.374 1.374 0 0 1 1.499-.21l19.335 9.215a1.147 1.147 0 0 1 0 2.07L3.012 22.25a1.374 1.374 0 0 1-1.947-1.46L2.49 12 1.065 3.21a1.375 1.375 0 0 1 .448-1.25Zm2.375 10.79-1.304 8.042L21.031 12 2.584 3.208l1.304 8.042h7.362a.75.75 0 0 1 0 1.5Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exploring medical bills across an individual's features
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mrmattkennedy/TH-Medical-Charges" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MattKennedy-Website
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Portfolio" class="md-nav__button md-logo" aria-label="Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.513 1.96a1.374 1.374 0 0 1 1.499-.21l19.335 9.215a1.147 1.147 0 0 1 0 2.07L3.012 22.25a1.374 1.374 0 0 1-1.947-1.46L2.49 12 1.065 3.21a1.375 1.375 0 0 1 .448-1.25Zm2.375 10.79-1.304 8.042L21.031 12 2.584 3.208l1.304 8.042h7.362a.75.75 0 0 1 0 1.5Z"/></svg>
+
+    </a>
+    Portfolio
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mrmattkennedy/TH-Medical-Charges" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MattKennedy-Website
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/projects_page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Research
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Research
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Exploring medical bills across an individual's features
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Exploring medical bills across an individual's features
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-data-will-we-be-using" class="md-nav__link">
+    <span class="md-ellipsis">
+      What data will we be using?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploring-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring the data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploring the data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-of-children" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of children
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smoker-vs-non-smoker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smoker vs non smoker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#age" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bmi" class="md-nav__link">
+    <span class="md-ellipsis">
+      BMI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BMI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thoughts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#highest-average-bills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Highest average bills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lowest-average-bills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lowest average bills
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predictive-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predictive modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Predictive modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neural-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neural network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ensemble-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ensemble methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cs447/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with semantics and parts-of-speech for non-canonical data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../census/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analyzing census populations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dlh_study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Short term mortality prediction in ICU patients with sepsis-3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-data-will-we-be-using" class="md-nav__link">
+    <span class="md-ellipsis">
+      What data will we be using?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploring-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring the data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploring the data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-of-children" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of children
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smoker-vs-non-smoker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smoker vs non smoker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#age" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bmi" class="md-nav__link">
+    <span class="md-ellipsis">
+      BMI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BMI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thoughts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#highest-average-bills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Highest average bills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lowest-average-bills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lowest average bills
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predictive-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predictive modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Predictive modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neural-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neural network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ensemble-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ensemble methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Exploring medical bills across an individual's features</h1>
+
+<p>It's another day in America - you wake up, enjoy some coffee to fight through that morning groginess, and crack open the paper. After your normal routine, it's time to start your day, and you head outside to warm your vehicle up to get to work. As you take your first step, the ground beneath you disappears and a sinkhole eats your entire right leg, then immediately closes. It looks like the ground has become sentient and has a craving for legs, but only right legs oddly enough. It happens so fast you can't react, but when your brain catches up with what is happening, you scramble away from the sinkhole. This isn't good - you need to go to the hospital, but the thought of that potential hospital bill makes you faint. After a moment, you regain consciousness and decide that it's ok; you have health insurance, and it can't be that bad. What does a sinkhole-bite replacement surgery cost, anyway? As your leg continues to bleed and you really need to get to the hospital, your curious nature continues to preoccupy you, and you can't help but wonder: do you know the price of <em>anything</em> at a hospital? Is there a way to know how much I'm going to pay before hand?</p>
+<p>These are all great questions that an unfortunate number of Americans don't have the answer to. And while none of us are going to be eaten by a sentient sinkhole tomorrow (I hope), you never know what the day may bring and if a hospital visit is included. Even more nebulous is the cost of that visit, both to you and insurance provider, and what you end up with. Throughout this read, we're going to explore what factors about an individual relate to their average hospital charges, how well can we can predict these charges based off of those factors, and drawing conclusions.</p>
+<h3 id="what-data-will-we-be-using">What data will we be using?<a class="headerlink" href="#what-data-will-we-be-using" title="Permanent link">&para;</a></h3>
+<p>For this article, we'll be using a dataset from the book <code>Machine Learning with R by Brett Lantz</code> - specifically, this book provides a dataset that has medical billing data. The columns in this dataset contain an individual's <code>age</code>, <code>sex</code>, <code>bmi</code>, number of <code>children</code>, <code>smoker</code>, <code>region</code> of the U.S., and the amount their insurance was billed, or <code>charges</code>. This dataset is relatively simple - it's purpose is almost entirely educational. This matches the purpose of this article, to explore the basics of data visualization and predictive modeling.</p>
+<h3 id="exploring-the-data">Exploring the data<a class="headerlink" href="#exploring-the-data" title="Permanent link">&para;</a></h3>
+<p>Looking at the attributes available, we can start by visualizing how each one is directly correlated to the <code>charges</code> column. To do this, we can create bar charts for the non-continuous variables, which are <code>sex</code>, <code>children</code>, <code>smoker</code>, and <code>region</code>. For the continuous variables, <code>age</code> and <code>bmi</code>, we can review line charts that display the average cost to insurance and identify what the trend is for these variables.</p>
+<h4 id="sex">Sex<a class="headerlink" href="#sex" title="Permanent link">&para;</a></h4>
+<p><img alt="Sex vs average charges" src="https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/sex_avg.png" /></p>
+<p>Looking at the first categorical variable, <code>sex</code> groups the average cost of medical charges by male and female. We don't immediately see any extreme difference - males are, on average, charged a little higher, although it's a fairly small difference.</p>
+<h4 id="number-of-children">Number of children<a class="headerlink" href="#number-of-children" title="Permanent link">&para;</a></h4>
+<p><img alt="Number of children vs average charges" src="https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/children_avg.png" /></p>
+<p>Next, we have number of <code>children</code>. Here we can more of a disparity between groups, but not in the way one might expect - individuals with 0 children have smaller bills charged to insurance, on average, than individuals with 1 child. The same applies for individuals with 1 child to individuals with 2 children, and the same for individuals with 2 kids vs individuals with 3 kids. However, people with 4 and 5 kids are billed less on average than their counterparts with fewer kids. So we can't call this a linear correlation, but still an interesting trend. The reason for this could be indirect, or something entirely unrelated to having kids.</p>
+<h4 id="smoker-vs-non-smoker">Smoker vs non smoker<a class="headerlink" href="#smoker-vs-non-smoker" title="Permanent link">&para;</a></h4>
+<p><img alt="Smoker vs average charges" src="https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/smoker_avg.png" /></p>
+<p>Now we take a look at <code>smoker</code> vs non smoker groups. The difference is pretty shocking - smokers' insurance are billed roughly <strong>4x</strong> as much as their non-smoking counterparts. Smoking has been proven to be extremely unhealthy, and the lifestyle can impact medical costs heavily, as seen here.</p>
+<h4 id="regions">Regions<a class="headerlink" href="#regions" title="Permanent link">&para;</a></h4>
+<p><img alt="Region vs average charges" src="https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/region_avg.png" /></p>
+<p>Last for categorical variables is the <code>regions</code>. We have a breakdown of 4 groups - northeast, northwest, southeast, and southwest. In the bar chart above, there are no strong differences between any region. Similar to sex, we do see some range on the averages presented, but there are far too many factors to be able to say what causes this, and the difference is fairly minimal.</p>
+<h4 id="age">Age<a class="headerlink" href="#age" title="Permanent link">&para;</a></h4>
+<p><img alt="Age vs average charges" src="https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/age_avg.png" /></p>
+<p>Moving on to the first of our continuous variables, we have <code>age</code>. The trend for this shows that as age increases, so do the average medical costs billed. This may seem to make complete sense, but there are additional considerations mentioned below that don't fall into the scope of this dataset.</p>
+<h4 id="bmi">BMI<a class="headerlink" href="#bmi" title="Permanent link">&para;</a></h4>
+<p><img alt="BMI vs average charges" src="https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/bmi_avg.png" /></p>
+<p>Lastly, we have <code>bmi</code>, or body mass index. This is measured as a person's weight divided by their height. In the chart above, we can see a strong upward trend; as BMI increases, so does the average medical cost billed.</p>
+<h5 id="thoughts">Thoughts<a class="headerlink" href="#thoughts" title="Permanent link">&para;</a></h5>
+<p>Shown above, we can see some trends that we would expect to see - that smoking, age, and BMI are all heavily impactful on medical costs. However, the dataset provided here is limited in scope. While it would be easy to assume that age directly increases medical costs on average, this data is looking at the amount charged to insurance. So for a younger population who may not have insurance, or may not be comfortable going to a doctor and will wait 10 years before the problem is unignorable, we may not have a fully accurate representation of these features vs medical costs.</p>
+<p>To get a better understanding of what group of features may be most responsible for higher bills, we can split this data in deciles based on the amount charged to insurance, then take the top 10% decile and get a row count for each possible group of features. Because the number of features is so small, this is possible for us, but it wouldn't normally be if there were more columns or more possible values for the columns we have. </p>
+<h4 id="highest-average-bills">Highest average bills<a class="headerlink" href="#highest-average-bills" title="Permanent link">&para;</a></h4>
+<p>After getting the top 10% most expensive charges, which is <code>134 rows</code> of data with an average charge amount of <code>$42,378</code> and getting the number of possible combinations of features out of our 6 columns, the total comes to <code>88,320</code> different unique groups of features. The table below lists what features are most commonly seen, and in how many rows that value is seen.</p>
+<table>
+<thead>
+<tr>
+<th>Age</th>
+<th>Sex</th>
+<th>BMI</th>
+<th># Children</th>
+<th>Smoker</th>
+<th>Region</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Age 37: 7<br/>Age 43: 66<br/>Age 22: 5<br/>Age 60: 5<br/>Age 44: 5</td>
+<td>Male: 84<br/>Female: 50</td>
+<td>36 BMI: 18<br/>34 BMI: 15<br/>31 BMI: 13<br/>37 BMI: 12<br/>35 BMI: 11</td>
+<td>0 children: 48<br/>2 children: 34<br/>1 child: 31<br/>3 children: 19<br/>4 children: 2<br/></td>
+<td>Smoker: 131<br/>Non-smoker: 3</td>
+<td>Southeast: 55<br/>Southwest: 32<br/>Northeast: 27<br/>Northwest: 20</td>
+</tr>
+</tbody>
+</table>
+<p>Some interesting trends to be seen in the table above - for example, almost every individual in the top 10% are smokers. Additionally, without making the page significantly longer, most of the expensive bills have a BMI that labels them as "obese". On the other side of the spectrum, the age was fairly diverse, except for 43 year olds - this is likely just due to natural aging, as well as the sample mostly comprising of this age range.</p>
+<h4 id="lowest-average-bills">Lowest average bills<a class="headerlink" href="#lowest-average-bills" title="Permanent link">&para;</a></h4>
+<p>After getting the bottom 10% least expensive charges, which is <code>134 rows</code> of data with an average charge amount of <code>$1,796</code> and getting the number of possible combinations of features out of our 6 columns, the total comes to <code>6,264</code> different unique groups of features. The table below lists what features are most commonly seen, and in how many rows that value is seen.</p>
+<table>
+<thead>
+<tr>
+<th>Age</th>
+<th>Sex</th>
+<th>BMI</th>
+<th># Children</th>
+<th>Smoker</th>
+<th>Region</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Age 18: 46<br/>Age 19: 38<br/>Age 21: 14<br/>Age 20: 12<br/>Age 22: 12</td>
+<td>Male: 82<br/>Female: 52</td>
+<td>26 BMI: 9<br/>30 BMI: 9<br/>34 BMI: 8<br/>29 BMI: 8<br/>28 BMI: 7</td>
+<td>0 children: 118<br/>1 child: 15<br/>2 children: 1</td>
+<td>Smoker: 0<br/>Non-smoker: 134</td>
+<td>Southeast: 47<br/>Southwest: 38<br/>Northeast: 25<br/>Northwest: 25</td>
+</tr>
+</tbody>
+</table>
+<p>A lot of what we saw in highest cost billed matches for this table as well - this is likely due to how large a sample size is out of the entire population. For example, we can see still more males fall into the bottom 10% of bills than females, and still more individuals from the southeast. However, we also see that the lower age ranges (18-22) are the most common ages for cheapest bills. Additionally, the BMI ranges are slightly lower, and there are absolutely no smokers.</p>
+<h3 id="predictive-modeling">Predictive modeling<a class="headerlink" href="#predictive-modeling" title="Permanent link">&para;</a></h3>
+<p>After exploring the data and understanding that some features can impact the medical bill more than others, let's see if we can create some probabilstic modeling - first, we can start with a basic feed forward neural network, and see if any other regression models or probabilstic models can perform better.</p>
+<h4 id="neural-network">Neural network<a class="headerlink" href="#neural-network" title="Permanent link">&para;</a></h4>
+<p>For the neural network, we're going to start by creating an attention model with encoder and decoder layers, and provide multiple transformation layers to... actually, we don't need to do any of that. While AI has been getting incredibly popular and we've made some truly impressive advancements, this is a simple dataset. There's no need to build a crazy network - let's start with a basic model using <code>tensorflow</code>.</p>
+<p>We'll start by importing our libraries and preprocessing our data using <code>sklearn</code>:
+<div class="highlight"><pre><span></span><code><span class="c1">#Preprocess data - #Start by converting string to int</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;children&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;children&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoker&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoker&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">codes</span>
+
+<span class="c1">#Create transformer</span>
+<span class="n">transformer</span> <span class="o">=</span> <span class="n">make_column_transformer</span><span class="p">(</span>
+    <span class="p">(</span><span class="n">MinMaxScaler</span><span class="p">(),</span> <span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="s1">&#39;bmi&#39;</span><span class="p">,</span> <span class="s1">&#39;children&#39;</span><span class="p">,</span> <span class="s1">&#39;smoker&#39;</span><span class="p">,</span> <span class="s1">&#39;region&#39;</span><span class="p">,</span> <span class="s1">&#39;charges&#39;</span><span class="p">])</span>
+<span class="p">)</span>
+
+<span class="c1">#Transform and split data</span>
+<span class="n">transformer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">transformer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1">#Split data</span>
+<span class="n">y_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">X_data</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">test_size</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span> <span class="o">=</span> <span class="n">X_data</span><span class="p">[:</span><span class="o">-</span><span class="n">test_size</span><span class="p">],</span> <span class="n">X_data</span><span class="p">[</span><span class="o">-</span><span class="n">test_size</span><span class="p">:]</span>
+<span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">y_data</span><span class="p">[:</span><span class="o">-</span><span class="n">test_size</span><span class="p">],</span> <span class="n">y_data</span><span class="p">[</span><span class="o">-</span><span class="n">test_size</span><span class="p">:]</span>
+</code></pre></div></p>
+<p>In just a few lines of code, we've preprocessed our data to scale between 0 and 1 using the <code>MinMaxScaler</code> of sklearn, and split the data into train samples and 100 test samples. Now, we can make our model - we can create a basic 3 layer network, with a batch size of 8 and 50 epochs. We'll use the standard <code>Adam</code> optimizer, as well as <code>relu</code> activations on each layer except the last - the reason for this is <code>relu</code> will prevent negative output from coming through, and some predictions could potentially be negative.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#Create model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">X_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],),</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1">#Compile and fit model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;mse&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(),</span> <span class="n">metrics</span><span class="o">=</span><span class="s1">&#39;mse&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</code></pre></div>
+<p>Great! We've run our model, let's see what our mean squared error is to check the accuracy of our model, and how our predictions look.</p>
+<p><img alt="nn_mse" src="https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/nn_mse.png" /></p>
+<p>These are impressive results - we can see that the predictions of the model almost exactly match that of the true labels. The overall mean squared error here is only 0.01405. For many projects, these results would be above passing and could work for many applications - but can we do better?</p>
+<h4 id="ensemble-methods">Ensemble methods<a class="headerlink" href="#ensemble-methods" title="Permanent link">&para;</a></h4>
+<p>With the <code>sklearn</code> library available, we can use over 200 different kinds of estimators. This article could be a lot longer if we wanted to step through each one. Instead, we'll use a few basic <code>ensemble</code> methods. Ensembles are groups of classifiers that work together to achieve better performance, and can often perform better than large independent classifiers. These are great for regression too - the ensemble methods we'll use <code>AdaBoost</code>, <code>RandomForest</code>, and <code>GradientBoost</code>.</p>
+<p>Sklearn also makes it incredibly easy to use any of these models. The below code will create the different ensembles, fit and train them, then create predictions
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">AdaBoostRegressor</span><span class="p">,</span> <span class="n">RandomForestRegressor</span><span class="p">,</span> <span class="n">GradientBoostingRegressor</span>
+
+<span class="n">ensembles</span> <span class="o">=</span> <span class="p">[</span><span class="n">AdaBoostRegressor</span><span class="p">(),</span> <span class="n">RandomForestRegressor</span><span class="p">(),</span> <span class="n">GradientBoostingRegressor</span><span class="p">()]</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ensembles</span><span class="p">:</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">preds</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Now that we have our ensemble methods fit and predicting, let's see how they did</p>
+<p><img alt="adaboost_mse" src="https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/adaboost_mse.png" />
+<img alt="gradientboost_mse" src="https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/gradientboost_mse.png" />
+<img alt="randomforest_mse" src="https://raw.githubusercontent.com/mrmattkennedy/TH-Medical-Charges/main/extras/figures/randomforest_mse.png" /></p>
+<p>Once again, these results are ideal, and they even outperformed the neural network! While the MSE for the neural network was roughly 0.01405, each of these is significantly lower, with the RandomForest dropping under 0.004. With no doubt, if better results were necessary, some hyperparameter optimization and other fine tuning could push this mean squared error value even lower.</p>
+<h3 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link">&para;</a></h3>
+<p>After having a bad start to your day and having your leg eaten by a sinkhole, you were faced with the dilemma - what factors go into medical costs? Am I likely to be charged more? To be honest, we can't answer that very well - no one has ever had their leg eaten by a sinkhole like this before. However, we can make some confident predictions based on your <code>age</code>, <code>sex</code>, whether you are a <code>smoke</code>, and <code>BMI</code> as to what your average bill will be. Additionally, we can better understand what information would be beneficial in continuing this exploration of medical prices, such as what group is more likely to have insurance, what group is more likely to actually go to the doctor if there is an issue, etc. With this information in hand, you feel prepared to tackle the day. You are now 10 minutes late for work after reading this. Sorry about that.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../projects/projects_page/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Projects">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Projects
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../cs447/" class="md-footer__link md-footer__link--next" aria-label="Next: Working with semantics and parts-of-speech for non-canonical data">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Working with semantics and parts-of-speech for non-canonical data
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:mdkennedy03@gmail.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/mrmattkennedy" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tracking", "navigation.tabs.sticky", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+    
+  </body>
+</html>
